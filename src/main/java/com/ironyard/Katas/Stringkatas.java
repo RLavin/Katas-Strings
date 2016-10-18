@@ -16,7 +16,16 @@ public class Stringkatas {
         System.out.println("");
         frontThree("Back");
         System.out.println("");
-        Endup("hi");
+        backAround("hope");
+        System.out.println("");
+        Front22("abc");
+        System.out.println("");
+        deleteDel("adevc") ;
+        System.out.println("");
+        startOz("bzoo");
+        System.out.println("");
+        Endup("hits");
+
 
 
         }
@@ -102,6 +111,88 @@ public class Stringkatas {
           }
 
           System.out.print("\"");
+
+
+      }
+
+
+      public static void backAround(String r){
+
+          System.out.print("backAround(\"" + r + "\")-->");
+          System.out.print("\"");
+          String x = r.substring(r.length()-1);
+          System.out.print( x + r + x );
+          System.out.print("\"");
+
+
+
+
+      }
+
+      public static void Front22(String y){
+
+          System.out.print("front22(\"" + y + "\")-->");
+          System.out.print("\"");
+
+          if (y.length() < 2) {
+              System.out.print(y+y+y) ;
+          }
+
+          else {
+              String x = y.substring(0,2);
+              System.out.print(x+y+x);
+          }
+
+
+          System.out.print("\"");
+
+
+      }
+
+      public static void deleteDel(String x){
+
+          System.out.print("delDel(\"" + x + "\")-->");
+          System.out.print("\"");
+
+          if (x.length() <= 3){
+              System.out.print(x);
+          }
+
+         else if(x.substring(1,4).equals("del")) {
+              StringBuilder sb = new StringBuilder(x);
+              sb.replace(1,4,"");
+              System.out.print(sb);
+
+          }
+          else {
+             System.out.print(x);
+          }
+          System.out.print("\"");
+
+      }
+
+      public static void startOz(String y){
+
+          System.out.print("startOz(\"" + y + "\")-->");
+          System.out.print("\"");
+
+          String x = "";
+          if (y.length() >= 1 && y.charAt(0)=='o') {
+              x = x + y.charAt(0);
+          }
+
+          if (y.length() >= 2 && y.charAt(1)=='z') {
+              x = x + y.charAt(1);
+          }
+
+          else {
+              String a = y.substring(0,2);
+              System.out.print(a);
+          }
+
+          System.out.print(x);
+          System.out.print("\"");
+
 
 
 
